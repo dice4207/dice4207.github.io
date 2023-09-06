@@ -14,16 +14,76 @@
 <button onclick="scrollDown()">Scroll Down</button>
 <div class="canvas">
 <p>My name is Wesley Jones, everyone calls me Dice. I'm a double amputee quadriplegic. I've been paralyzed since 2015 after being gunned down three times at a peace gathering
-     down in Florida. In 2016 I bought a laptop and the equipment that I could use to be able to use a computer since then I have came a far away of understanding the ends and outs of a computer. Now I'm  pursuing a career in web developing. My passions are traveling , music , skydrivng and making dreams come true.I am self motivated. I don't let my disability get the better at me.</p>
+     down in Florida. In 2016 I bought a laptop and the equipment that I could use to be able to use a computer since then I have came a far away of understanding the ends and outs of a computer. Now I'm  pursuing a career in web developing. 
+     My passions are traveling , music, skydiving and making dreams come true. I am self motivated. I don't let my disability get the better of me. I started jumping out of planes a couple yearss ago  as a new hobbie I fell in love with it. It's my addiction. so far I have jumped out of 19 planes and counting</p>
 </div>
+
+
+
+
 <div id="stickMan">
         <div id="stick"></div>
         <div id="head"></div>
     </div>
 
 
+<div class="canvas">
 <script src="portfolio.js"></script>
+</div> 
+
+<h1> Wecome To  Site !</h1>
 
 
+<div></div>
+<canvas id="myCanvas" width="400" height="400" style="border: 1px solid rgb(32, 28, 28);"></canvas>
+   
+        <Script>
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+    
+            // Ball properties
+            const ball = {
+                x: canvas.width / 2,
+                y: canvas.height / 2,
+                radius: 20,
+                dx: 2, // Change in x-direction
+                colorIndex: 0,
+                colors: ['#FF5733', '#33FF57', '#5733FF']
+            };
+    
+            function drawBall() {
+                ctx.beginPath();
+                ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+                ctx.fillStyle = ball.colors[ball.colorIndex];
+                ctx.fill();
+                ctx.closePath();
+            }
+    
+            function updateBall() {
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+                drawBall();
+    
+                // Update ball position
+                ball.x += ball.dx;
+    
+                // Check for collisions with canvas boundaries
+                if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
+                    // Reverse the direction when hitting the canvas edge
+                    ball.dx *= -1;
+    
+                    // Change the ball color
+                    ball.colorIndex = (ball.colorIndex + 1) % ball.colors.length;
+                }
+    
+                requestAnimationFrame(updateBall);
+            }
+    
+            updateBall();
+        </script>
+        <script>
+            
+        </script>
 </body>
 </html>
