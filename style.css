@@ -3,7 +3,8 @@ img{
 }
 body {
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
+    background-color: beige 
 }
 
 #stickMan {
