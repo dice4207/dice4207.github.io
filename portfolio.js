@@ -15,7 +15,7 @@ const stickMan = document.getElementById('stickMan');
         }
 
         // Trigger the jump every second
-        setInterval(jump, 1000);
+        setInterval(jump, 500);
 
          // Function to scroll down the page when the button is clicked
          function scrollDown() {
