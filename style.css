@@ -9,7 +9,7 @@ body {
 #stickMan {
     position: absolute;
     bottom: 1;
-    left: 99%;
+    left: 80%;
     transform: translateX(-50%);
 }
 
@@ -18,8 +18,8 @@ body {
     height: 100px;
     background-color: brown;
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: 0px;
+    left: 40p;
     transform-origin: bottom center;
     transform: translateX(-50%);
 }
@@ -27,7 +27,7 @@ body {
 #head {
     width: 40px;
     height: 40px;
-    background-color: #f0e68c;
+    background-color: #9bf08c;
     border-radius: 50%;
     position: absolute;
     bottom: 100px;
@@ -37,12 +37,16 @@ body {
 .canvas{
 width: 534px;
 top: 50px;
-height: 50px;
-background-color: #8d1b1b;
+height: 200px;
+background-color: #0f4fd1;
 }
 p{
-    color: #020202;
-   background-color: rgb(229, 109, 49);
+    color: #e6d3d3;
+   
   font-size: large;
 }
+ 
 
+h1{
+color: #d91212;
+}
