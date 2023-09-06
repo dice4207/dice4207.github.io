@@ -1,0 +1,47 @@
+img{
+    height: 300px;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#stickMan {
+    position: absolute;
+    bottom: 1;
+    left: 99%;
+    transform: translateX(-50%);
+}
+
+#stick {
+    width: 10px;
+    height: 100px;
+    background-color: brown;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%);
+}
+
+#head {
+    width: 40px;
+    height: 40px;
+    background-color: #f0e68c;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.canvas{
+width: 534px;
+top: 50px;
+height: 50px;
+background-color: #8d1b1b;
+}
+p{
+    color: #020202;
+   background-color: rgb(229, 109, 49);
+  font-size: large;
+}
