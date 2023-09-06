@@ -2,7 +2,7 @@ const stickMan = document.getElementById('stickMan');
 
         // Function to make the stick man jump
         function jump() {
-            let jumpHeight = 1000;
+            let jumpHeight = 300;
             const jumpDuration = 500; // in milliseconds
 
             stickMan.style.transition = `transform ${jumpDuration / 2}ms ease-in-out`;
