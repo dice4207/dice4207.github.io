@@ -10,8 +10,8 @@
     
 <h1> Wesley's Portfolio AKA Dice Jones</h1> 
   
-<img   src="/Biopic2.jpg">
-<button onclick="scrollDown()">Scroll Down</button>
+<img class="fit-picture"  src="/Biopic2.jpg"/>
+
 <div class="canvas">
 <p>My name is Wesley Jones, everyone calls me Dice. I'm a double amputee quadriplegic. I've been paralyzed since 2015 after being gunned down three times at a peace gathering
      down in Florida. In 2016 I bought a laptop and the equipment that I could use to be able to use a computer since then I have came a far away of understanding the ends and outs of a computer. Now I'm  pursuing a career in web developing. 
@@ -31,10 +31,10 @@
 <script src="portfolio.js"></script>
 </div> 
 
-<h1> Wecome To  Site !</h1>
+<h1> Welcome To My Site !</h1>
+ 
 
 
-<div></div>
 <canvas id="myCanvas" width="400" height="400" style="border: 1px solid rgb(32, 28, 28);"></canvas>
    
         <Script>
@@ -82,6 +82,101 @@
     
             updateBall();
         </script>
-       
+     <style>
+        #game-board {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        #pac-man {
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            transition: transform 0.2s;
+        }
+    </style>
+   <div id="game-board">
+    <div id="pac-man"></div>
+</div>
+
+<script>
+    const pacMan = document.getElementById("pac-man");
+    const gameBoard = document.getElementById("game-board");
+
+    let pacManAngle = 0;
+
+    // Handle arrow key presses
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") {
+            pacManAngle = 0;
+        } else if (event.key === "ArrowDown") {
+            pacManAngle = 90;
+        } else if (event.key === "ArrowLeft") {
+            pacManAngle = 180;
+        } else if (event.key === "ArrowUp") {
+            pacManAngle = 270;
+        }
+
+        pacMan.style.transform = `rotate(${pacManAngle}deg)`;
+    });
+
+    // Move Pac-Man
+    function movePacMan() {
+        const pacManRect = pacMan.getBoundingClientRect();
+        const gameBoardRect = gameBoard.getBoundingClientRect();
+
+        // Move Pac-Man
+        pacMan.style.left = pacManRect.left + 5 + "px";
+
+        // Check for collision with game board boundaries
+        if (pacManRect.right >= gameBoardRect.right) {
+            pacMan.style.left = gameBoardRect.left + "px";
+        }
+
+        requestAnimationFrame(movePacMan);
+    }
+
+    movePacMan();
+</script>
+<div id="dice-container"></div>
+<button onclick="rollDice()">Roll Dice</button>
+
+<script>
+    const diceContainer = document.getElementById("dice-container");
+
+    function rollDie() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    function rollDice() {
+        diceContainer.innerHTML = "";
+
+        for (let i = 1; i <= 6; i++) {
+            const result = rollDie();
+            const dieElement = document.createElement("div");
+            dieElement.classList.add("dice");
+            dieElement.textContent = result;
+            diceContainer.appendChild(dieElement);
+        }
+    }
+</script>
+<style>
+    .dice {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border: 1px solid black;
+        display: inline-block;
+        margin: 5px;
+        font-size: 24px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 5px;
+    }
+</style>  
 </body>
 </html>
