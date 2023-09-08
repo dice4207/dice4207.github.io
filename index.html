@@ -177,6 +177,63 @@
         line-height: 50px;
         border-radius: 5px;
     }
-</style>  
+</style> 
+    <div class="eye">
+      <div class="ball"></div>
+      </div>
+    <div class="eyes">
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var balls = document.getElementsByClassName("ball");
+    document.onmousemove = () => {
+      var x = (event.clientX * 100) / window.innerWidth + "%";
+      var y = (event.clientY * 100) / window.innerHeight + "%";
+      
+for (let i = 0; i < 2; i++) {
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+      }
+    };
+  </script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background: #14495e;
+}
+
+.eyes {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: cent;
+}
+.eye {
+  width: 240px;
+  height: 120px;
+  background: #c01010;
+  display: inline-block;
+  margin: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.ball {
+  width: 70px;
+  height: 70px;
+  background: #000000;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+    </style>
 </body>
 </html>
