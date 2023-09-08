@@ -20,7 +20,7 @@ body {
     background-color: brown;
     position: absolute;
     bottom: 0px;
-    left: 30p;
+    left: 26p;
     transform-origin: bottom center;
     transform: translateX(-50%);
 }
