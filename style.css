@@ -21,7 +21,7 @@ body {
     background-color: brown;
     position: absolute;
     bottom: 0px;
-    left: 40px;
+    left: 50%;
     transform-origin: bottom center;
     transform: translateX(-50%);
 }
@@ -33,7 +33,7 @@ body {
     border-radius: 50%;
     position: absolute;
     bottom: 100px;
-    left: 50px;
+    left: 50%;
     transform: translateX(-50%);
 }
 .canvas{
