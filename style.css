@@ -43,11 +43,12 @@ background-color: #0f4fd1;
 }
 p{
     color: #e6d3d3;
-   text-align: right;
+  text-align: right;
   font-size: large;
 }
  
 
 h1{
+    text-align: center;
 color: #d91212;
 }
