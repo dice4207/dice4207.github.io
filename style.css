@@ -10,7 +10,7 @@ body {
 #stickMan {
     position: absolute;
     bottom: 1;
-    left: 80%;
+    left: 70%;
     transform: translateX(-50%);
 }
 
@@ -20,7 +20,7 @@ body {
     background-color: brown;
     position: absolute;
     bottom: 0px;
-    left: 30px;
+    left: 40px;
     transform-origin: bottom center;
     transform: translateX(-50%);
 }
