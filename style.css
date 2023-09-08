@@ -12,7 +12,6 @@ body {
     bottom: 1;
     left: 80%;
     transform: translateX(-50%);
-    text-align: centert;
 }
 
 #stick {
@@ -21,7 +20,7 @@ body {
     background-color: brown;
     position: absolute;
     bottom: 0px;
-    left: 30p;
+    left: 40p;
     transform-origin: bottom center;
     transform: translateX(-50%);
 }
