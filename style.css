@@ -1,10 +1,13 @@
-img{
+html {
+    scroll-behavior: smooth;
+  }
+  img{
     height: 300px;
 }
 body {
     margin: 0;
     overflow: auto;
-    background-color: beige; 
+    background-color: beige;
 }
 
 #stickMan {
@@ -38,24 +41,71 @@ body {
 .canvas{
 width: 534px;
 top: 50px;
-height: 150px;
-background-color: #0f4fd1;
+height: 200px;
+background-color: #b2c9b1;
 }
 p{
-    color: #e6d3d3;
-  text-align: center;
+    color: #1b1515;
+   
   font-size: large;
 }
  
 
 h1{
-    text-align: center;
 color: #d91212;
+text-align: center;
 }
 
 a {
-    color: rgb(7, 7, 9);
+    color: rgb(9, 9, 11);
     text-align: right;
-    background-color: #c27e16;
-    font-size: larger;
+  
+    font-size: x-large;
 }
+
+
+  
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+  }
+  
+  .navbar a:hover {
+    color: #FF5733; /* Change the color when hovering over a link */
+  }
+  #col{
+    color: #dc1919;
+    background-color: black;
+  }
+  img{
+    height: 500px;
+  }
+  #about {
+    height: 60px;
+    background-color: rgb(92, 148, 110);
+  }
+  
+ 
+  
+  #contact {
+    height: px;
+    background-color: #FF5733;
+  }
