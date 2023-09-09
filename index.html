@@ -5,20 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio </title>
     <link rel="stylesheet" href="./style.css">
-</head>
-<body>
     
-<h1> Wesley's Portfolio AKA Dice Jones</h1> 
-  
-<img class="fit-picture"  src="/Biopic2.jpg"alt="skydiving over Niagara Fall"/>
+<body><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </nav>
+            <img src ="/train.jpg" alt="Train on a mountain">
+      
+            <div class="container text-center">
+        
+        </div>
+      </div>
+      
+      
+      
+      <div class="main" id ="contact">
+        <h2> Contact</h2>
+      <a href="#contact"></a>
+      
+          <a href="https://youtu.be/gHMa8F5_5es">YouYube </a>,
+<a href="https://www.linkedin.com/in/wesley-jones-353b68280/">Linkedin.com</a> 
+          <a href="#contact"></a>
+          </div>
+          <div class="main" id="portfolio">
+            <h2>Portfolio</h2>
+          <a href="#portfolio"></a>
+            </div>
+<h1> Wesley Portfolio Aka Dice Jones </h1> 
+
+
+
+    <img class="fit-picture"src="/Biopic2.jpg" alt="skydiving over Niagara Fall"/>
 
 <div class="canvas">
-<p style="text-align:right">My name is Wesley Jones, everyone calls me Dice. I'm a double amputee quadriplegic. I've been paralyzed since 2015 after being gunned down three times at a peace gathering
-     down in Florida. In 2016 I bought a laptop and the equipment that I could use to be able to use a computer since then I have came a far away of understanding the ins and outs of a computer. Now I'm  pursuing a career in web developing. 
-     My passions are traveling , music, skydiving and making dreams come true. I am self motivated. I don't let my disability get the better of me. I started jumping out of planes a couple years ago.  The first time I fell in love with it. I have jump out of 19 planes so far. When I'm passionate about something it means everything to me. With that being said I know I will climb the ladders in web developing to the top. The sky is the limit.</p>
+    <div class="main" id="about">
+        <h2>About</h2>
+         "<a href="#about"></a>
+        
+      </div>
+
+
+<p>My name is Wesley Jones, everyone calls me Dice. I'm a double amputee quadriplegic. I've been paralyzed since 2015 after being gunned down three times at a peace gathering
+     down in Florida. In 2016 I bought a laptop and the equipment to be able to use a computer since then I have came a long aways of understanding the ins and outs of a computer. Now I'm  pursuing a career in web developing. 
+     My passions are traveling , music, skydiving and making dreams come true. I am self motivated. My gaol is to become the best man that I can be. So one day I can share my knowledge. To perhaps maybe change someones life for the better. I don't let my disability get the better of me. I started jumping out of planes a couple years ago . I fell in love with it. It's my way of saying I get knock down but I get up again, you never gonna keep me down. 
+     So far I have jumped out of 19 planes and counting. I'm going to jumped all 50 states. To  mostly inspired those who are down on themselves and think they can't live life to the fullest </p>
 </div>
 
-                                                                                              
+
 
 
 <div id="stickMan">
@@ -35,7 +72,7 @@
  
 
 
-<canvas id="myCanvas" width="400" height="400" style="border: 1px solid rgb(32, 28, 28);"></canvas>
+<canvas id="myCanvas" "></canvas>
    
         <Script>
             const canvas = document.getElementById('myCanvas');
@@ -173,69 +210,91 @@
         display: inline-block;
         margin: 5px;
         font-size: 24px;
-        text-align: right;
+        text-align: center;
         line-height: 50px;
         border-radius: 5px;
     }
-</style> 
-  <div class="eyes">
-      <div class="eye">
-        <div class="ball"></div>
-      </div>
-      <div class="eye">
-        <div class="ball"></div>
-      </div>
+</style>  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+            const navbarLinks = document.querySelectorAll(".navbar a");
+        
+            navbarLinks.forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+        
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50, // Adjust the scroll position as needed
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        });
+        
+
+        
+</script>
+<div class="eyes">
+    <div class="eye">
+      <div class="ball"></div>
     </div>
-     <style>
-  body {
-  margin: 0;
-  padding: 0;
-  background: #14495e;
+    <div class="eye">
+      <div class="ball"></div>
+    </div>
+  </div>
+   <style>
+body {
+margin: 0;
+padding: 0;
+
 }
 
 .eyes {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: right;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+text-align: right;
 }
 .eye {
-  width: 240px;
-  height: 120px;
-  background: #c01010;
-  display: inline-block;
-  margin: 40px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
+width: 240px;
+height: 120px;
+background: #c01010;
+display: inline-block;
+margin: 40px;
+border-radius: 50%;
+position: relative;
+overflow: hidden;
 }
 .ball {
-  width: 70px;
-  height: 70px;
-  background: #000000;
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+width: 70px;
+height: 70px;
+background: #000000;
+position: absolute;
+top: 30%;
+left: 30%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
 }
 
 
-    </style>
-  <script>
-    var balls = document.getElementsByClassName("ball");
-    document.onmousemove = () => {
-      var x = (event.clientX * 100) / window.innerWidth + "%";
-      var y = (event.clientY * 100) / window.innerHeight + "%";
-      
+  </style>
+<script>
+  var balls = document.getElementsByClassName("ball");
+  document.onmousemove = () => {
+    var x = (event.clientX * 100) / window.innerWidth + "%";
+    var y = (event.clientY * 100) / window.innerHeight + "%";
+    
 for (let i = 0; i < 2; i++) {
-        balls[i].style.left = x;
-        balls[i].style.top = y;
-        balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
-      }
-    };
-  </script>
- <a href="https://youtu.be/gHMa8F5_5es">YouTube </a>
+      balls[i].style.left = x;
+      balls[i].style.top = y;
+      balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+    }
+  };
+</script>
 </body>
 </html>
